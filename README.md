@@ -8,7 +8,7 @@
   <a href="#-application-modes">Modes</a> ·
   <a href="#-architecture">Architecture</a> ·
   <a href="#-repository-structure">Structure</a> ·
-  <a href="#-installation--setup">Install</a> ·
+  <a href="resources/installation.md">Install</a> ·
   <a href="#custom-llm">LLM</a> ·
   <a href="#-running-gipity">Running</a> ·
   <a href="#-api-key-setup">Keys</a> ·
