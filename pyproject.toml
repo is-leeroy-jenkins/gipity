@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gipity-py"
+version = "0.1.0"
+description = "OpenAI GPT Streamlit assistant for multimodal workflows and document retrieval"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+authors = [{name = "Terry Eppler"}]
+license = "MIT"
+license-files = ["LICENSE.txt"]
+dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/is-leeroy-jenkins/gipity"
+Documentation = "https://is-leeroy-jenkins.github.io/gipity/"
+Issues = "https://github.com/is-leeroy-jenkins/gipity/issues"
+
+[project.scripts]
+gipity = "gipity.cli:desktop"
+gipity-browser = "gipity.cli:main"
+
+[tool.setuptools]
+packages = ["gipity", "gipity.boogr"]
+package-dir = {gipity = "."}
+include-package-data = false
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements-runtime.txt"]}
+
+[tool.setuptools.package-data]
+gipity = ["resources/**/*.png", "resources/**/*.ico", ".streamlit/config.toml"]
+
+"gipity.boogr" = ["*.ico", "resources/**/*.png", "resources/**/*.ico", "resources/**/*.svg", "resources/**/*.gif"]
